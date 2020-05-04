@@ -71,7 +71,7 @@ public class Ex08_AccessDatabase extends Application{
 	 */
 	@Override
 	public void stop() throws Exception {
-		db.close(); //schliessen der Datenban
+		db.close(); //schliessen der Datenbank
 		super.stop();
 	}
 	public static void main(String[] args) {
