@@ -55,5 +55,4 @@ public class ImageInBackground extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-
 }
