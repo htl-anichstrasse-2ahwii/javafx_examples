@@ -13,6 +13,10 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+/**
+ * Ein Hintergrundbild kann für alle Steuer- oder Layoutelemente gesetzt werden.
+ * Hier wird der Hintergrund einfach auf ein GridPane gelegt
+ */
 public class ImageInBackground extends Application {
 
 	@Override
@@ -22,6 +26,13 @@ public class ImageInBackground extends Application {
 			
 			GridPane grid = new GridPane();
 			Image im = new Image("images/bart.png");
+			/* Das sind ie Parameter:
+			 * image: Das Bild
+			 * repeatX: Wird das Bild in X-Richtung wiederholt
+			 * repeatY: Wird das Bild in Y-Richtung wiederholt
+			 * position: Wo soll das Bild angezeigt werden
+			 * size: Wie groß soll das Hintergrundbild dargestellt werden
+			*/
 			BackgroundImage bi = new BackgroundImage(im, BackgroundRepeat.REPEAT,BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
 			          BackgroundSize.DEFAULT);
 			
