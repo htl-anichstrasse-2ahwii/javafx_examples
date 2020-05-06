@@ -1,4 +1,4 @@
-package application.ex_11_images;
+package application.ex_12_images;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

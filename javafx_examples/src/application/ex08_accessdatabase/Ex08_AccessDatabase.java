@@ -62,7 +62,6 @@ public class Ex08_AccessDatabase extends Application{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 
 	/**
@@ -74,6 +73,7 @@ public class Ex08_AccessDatabase extends Application{
 		db.close(); //schliessen der Datenbank
 		super.stop();
 	}
+
 	public static void main(String[] args) {
 		launch(args);
 	}

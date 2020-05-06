@@ -1,4 +1,4 @@
-package application.ex_11_images;
+package application.ex_12_images;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -24,7 +24,7 @@ public class ButtonWithImage extends Application {
 			HBox top = new HBox();
 			
 			Image im1 = new Image("images/icons/accessories-calculator.png");
-			Button b1 = new Button();
+			Button b1 = new Button("");
 			b1.setGraphic(new ImageView(im1));
 			
 			top.getChildren().add(b1);
