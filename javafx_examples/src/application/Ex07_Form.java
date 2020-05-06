@@ -31,7 +31,7 @@ public class Ex07_Form extends Application {
 			baseForm.setHgap(10); // Horizontaler Platz zwischen den Zellen
 			baseForm.setVgap(10); // Vertikaler Platz zwischen den Zellen
 
-			Text scenetitle = new Text("Welcome");
+			Label scenetitle = new Label("Welcome");
 			scenetitle.setFont(Font.font("Tahoma", FontWeight.BOLD, 20)); // Es koennen auch andere Schriftarten für
 																			// Labels verwendet werden
 			baseForm.add(scenetitle, 0, 0, 2, 1); // Die Beschriftung soll an die Stelle (0,0) kommen, sich über 2
