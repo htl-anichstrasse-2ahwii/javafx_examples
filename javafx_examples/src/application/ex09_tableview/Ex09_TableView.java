@@ -35,75 +35,73 @@ public class Ex09_TableView extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
-		try {
-			BorderPane root = new BorderPane();
-			table = new TableView<>();
 
-			// Die 2 Typen stellen folgendes dar: Person: Abbild auf die Klasse Person; Dort
-			// auf einen String-Wert
-			TableColumn<Person, String> firstNameCol = new TableColumn<>("Vorname");
-			// Auf welches Attribut in der Klasse Person wird abgebildet: Hier auf firstName
-			firstNameCol.setCellValueFactory(new PropertyValueFactory<Person, String>("firstName"));
-			firstNameCol.setPrefWidth(300); // Breite der Spalte
+		BorderPane root = new BorderPane();
+		table = new TableView<>();
 
-			TableColumn<Person, String> lastNameCol = new TableColumn<>("Nachname");
-			lastNameCol.setCellValueFactory(new PropertyValueFactory<Person, String>("lastName"));
-			lastNameCol.setPrefWidth(300);
+		// Die 2 Typen stellen folgendes dar: Person: Abbild auf die Klasse Person; Dort
+		// auf einen String-Wert
+		TableColumn<Person, String> firstNameCol = new TableColumn<>("Vorname");
+		// Auf welches Attribut in der Klasse Person wird abgebildet: Hier auf firstName
+		firstNameCol.setCellValueFactory(new PropertyValueFactory<Person, String>("firstName"));
+		firstNameCol.setPrefWidth(300); // Breite der Spalte
 
-			TableColumn<Person, Integer> ageCol = new TableColumn<>("Alter");
-			ageCol.setCellValueFactory(new PropertyValueFactory<Person, Integer>("age"));
-			ageCol.setPrefWidth(300);
-			// Stelle alle diese Spalten in die Tabelle
-			table.getColumns().addAll(firstNameCol, lastNameCol, ageCol);
+		TableColumn<Person, String> lastNameCol = new TableColumn<>("Nachname");
+		lastNameCol.setCellValueFactory(new PropertyValueFactory<Person, String>("lastName"));
+		lastNameCol.setPrefWidth(300);
 
-			// Zu Testzwecken: Gib diese Person in die Tabelle
-			Person p = new Person("Georgi", "Facello", 45);
-			persons.add(p);
-			// Verknüpfe die Liste persons mit der Tabellenansicht
-			table.setItems(persons);
+		TableColumn<Person, Integer> ageCol = new TableColumn<>("Alter");
+		ageCol.setCellValueFactory(new PropertyValueFactory<Person, Integer>("age"));
+		ageCol.setPrefWidth(300);
+		// Stelle alle diese Spalten in die Tabelle
+		table.getColumns().addAll(firstNameCol, lastNameCol, ageCol);
 
-			root.setCenter(table);
+		// Zu Testzwecken: Gib diese Person in die Tabelle
+		Person p = new Person("Georgi", "Facello", 45);
+		persons.add(p);
+		// Verknüpfe die Liste persons mit der Tabellenansicht
+		table.setItems(persons);
 
-			HBox top = new HBox();
-			Button bAdd = new Button("hinzufügen");
-			bAdd.setOnAction((ActionEvent e) -> {
-				String firstName = tFirstName.getText();
-				String lastName = tLastName.getText();
-				String age = tAge.getText();
-				Person p2 = new Person(firstName, lastName, Integer.parseInt(age));
-				persons.add(p2); // Schreibe die Daten der Textfelder in die Tabelle
-			});
+		root.setCenter(table);
 
-			Button bRemove = new Button("löschen");
-			bRemove.setOnAction((ActionEvent e) -> {
-				int line = table.getSelectionModel().getSelectedIndex(); // Hole den Index der ausgewählten Zeile
-				persons.remove(line); // Loesche die aktuelle Zeile
-			});
+		HBox top = new HBox();
+		Button bAdd = new Button("hinzufügen");
+		bAdd.setOnAction((ActionEvent e) -> {
+			String firstName = tFirstName.getText();
+			String lastName = tLastName.getText();
+			String age = tAge.getText();
+			Person p2 = new Person(firstName, lastName, Integer.parseInt(age));
+			persons.add(p2); // Schreibe die Daten der Textfelder in die Tabelle
+		});
 
-			Button bChange = new Button("ändern");
-			bChange.setOnAction((ActionEvent e) -> {
-				String firstName = tFirstName.getText();
-				String lastName = tLastName.getText();
-				String age = tAge.getText();
-				Person p2 = new Person(firstName, lastName, Integer.parseInt(age));
-				int line = table.getSelectionModel().getSelectedIndex(); // Hole den Index der ausgewählten Zeile
-				persons.set(line, p2); // Ueberschreibe die Daten in der aktuellen Zeile
-			});
+		Button bRemove = new Button("löschen");
+		bRemove.setOnAction((ActionEvent e) -> {
+			int line = table.getSelectionModel().getSelectedIndex(); // Hole den Index der ausgewählten Zeile
+			persons.remove(line); // Loesche die aktuelle Zeile
+		});
 
-			tFirstName = new TextField("Georgi");
-			tLastName = new TextField("Facello");
-			tAge = new TextField("45");
+		Button bChange = new Button("ändern");
+		bChange.setOnAction((ActionEvent e) -> {
+			String firstName = tFirstName.getText();
+			String lastName = tLastName.getText();
+			String age = tAge.getText();
+			Person p2 = new Person(firstName, lastName, Integer.parseInt(age));
+			int line = table.getSelectionModel().getSelectedIndex(); // Hole den Index der ausgewählten Zeile
+			persons.set(line, p2); // Ueberschreibe die Daten in der aktuellen Zeile
+		});
 
-			top.getChildren().addAll(bAdd, bRemove, bChange, tFirstName, tLastName, tAge);
-			root.setTop(top);
+		tFirstName = new TextField("Georgi");
+		tLastName = new TextField("Facello");
+		tAge = new TextField("45");
 
-			Scene scene = new Scene(root, 800, 400);
+		top.getChildren().addAll(bAdd, bRemove, bChange, tFirstName, tLastName, tAge);
+		root.setTop(top);
 
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		Scene scene = new Scene(root, 800, 400);
+
+		primaryStage.setScene(scene);
+		primaryStage.show();
+
 	}
 
 	public static void main(String[] args) {
