@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import application.ex09_tableview.Person;
+
 public class DBManager {
 	private Connection con;
 	public DBManager() throws ClassNotFoundException, SQLException  {		
@@ -31,6 +33,12 @@ public class DBManager {
 		rs.close();
 		stmt.close();
 		return e;
+	}
+	
+	public void setPerson(Person p) throws SQLException
+	{
+		//dient nur um die Verbindung zu Ex09_TableView_DBAccess zu zeigen
+		//sollte dann jeder für sich selbst implementieren
 	}
 	
 	public void close() throws SQLException
