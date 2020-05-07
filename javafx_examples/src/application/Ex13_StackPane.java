@@ -17,13 +17,17 @@ import javafx.stage.Stage;
 public class Ex13_StackPane extends Application{
 	StackPane center;
 	
+	/**
+	 * Eine weitere Variante wie man zwischen Ansichten umstellen kann. Ein StackPane verwaltet mehrere Ansichten wie ein Stapel aus Karten.
+	 * Hier wird immer die aktuelle Ansicht sichtbar geschalten, die anderen unsichtbar
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			BorderPane root = new BorderPane();
 			
 			center = new StackPane();
-			
+
 			HBox first = new HBox(); //Horizontale Anordnung der Steuerelemente
 			Button b1 = new Button("A");
 			Button b2 = new Button("B");
