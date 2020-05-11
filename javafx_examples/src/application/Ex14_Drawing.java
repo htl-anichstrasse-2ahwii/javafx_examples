@@ -5,6 +5,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -28,7 +29,8 @@ public class Ex14_Drawing extends Application{
         gc.setStroke(Color.BLUE); //Einstellen der Zeichenfarbe
         gc.strokeOval(500, 300, 50, 40); //Hier wird nur gezeichnet, nicht ausgefuellt
         
-        
+        //Zeichne ein Bild an die enstprechende Stelle
+        gc.drawImage(new Image("images/bart.png"), 500, 300);
         
         root.getChildren().add(canvas);
         primaryStage.setScene(new Scene(root,1000,600));
