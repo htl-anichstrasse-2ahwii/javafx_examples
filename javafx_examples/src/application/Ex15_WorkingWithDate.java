@@ -54,9 +54,7 @@ public class Ex15_WorkingWithDate extends Application {
 			DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy MM dd");
 			String dateStr = ld.format(df);
 			center.appendText(dateStr + "\n");
-			
-			
-
+		
 		});
 		top.getChildren().addAll(date, select);
 		root.setTop(top);
