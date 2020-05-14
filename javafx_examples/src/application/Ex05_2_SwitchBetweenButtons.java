@@ -4,8 +4,8 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  * 
  * Weiters soll gezeigt werden, wie man aus einer Bildersammlung einzelne Teile herausliest und fuer die Imageviews verwendet
  */
-public class Ex05_2_ToggleButtons extends Application {
+public class Ex05_2_SwitchBetweenButtons extends Application {
 	private Label feedback;
 	//Konstanten die verwendet werden, das icon aus dem Gesamtbild herauszuholen
 	private final int Y_LINE = 110;
@@ -64,14 +64,14 @@ public class Ex05_2_ToggleButtons extends Application {
 		BorderPane root = new BorderPane();
 		HBox center = new HBox();
 		
-		ToggleButton back = new ToggleButton();	
+		Button back = new Button();	
 		back.setGraphic(getIV(BUTTONS.BACK)); //setze den back-Button
 		back.setOnAction((ActionEvent e) -> {
 		    feedback.setText("back");
 		});
 		center.getChildren().add(back);
 		
-		ToggleButton play = new ToggleButton();	
+		Button play = new Button();	
 		play.setGraphic(getIV(BUTTONS.PLAY)); 
 		play.setOnAction((ActionEvent e) -> {
 			if (playOn)
@@ -81,15 +81,15 @@ public class Ex05_2_ToggleButtons extends Application {
 			} else
 			{
 				play.setGraphic(getIV(BUTTONS.PAUSE));
-				
 				feedback.setText("play");
+				
 			}
 			playOn = !playOn;
 		    
 		});
 		center.getChildren().add(play);
 
-		ToggleButton stop = new ToggleButton();	
+		Button stop = new Button();	
 		stop.setGraphic(getIV(BUTTONS.STOP));
 		stop.setOnAction((ActionEvent e) -> {
 			play.setGraphic(getIV(BUTTONS.PLAY));
@@ -98,7 +98,7 @@ public class Ex05_2_ToggleButtons extends Application {
 		});
 		center.getChildren().add(stop);
 		
-		ToggleButton forward = new ToggleButton();	
+		Button forward = new Button();	
 		forward.setGraphic(getIV(BUTTONS.FORWARD));
 		forward.setOnAction((ActionEvent e) -> {
 		    feedback.setText("forward");
