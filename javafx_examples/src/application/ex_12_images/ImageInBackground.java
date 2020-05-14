@@ -26,7 +26,7 @@ public class ImageInBackground extends Application {
 			
 			GridPane grid = new GridPane();
 			Image im = new Image("images/bart.png");
-			/* Das sind ie Parameter:
+			/* Das sind die Parameter:
 			 * image: Das Bild
 			 * repeatX: Wird das Bild in X-Richtung wiederholt
 			 * repeatY: Wird das Bild in Y-Richtung wiederholt
