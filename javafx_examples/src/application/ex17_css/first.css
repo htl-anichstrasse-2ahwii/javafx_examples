@@ -4,7 +4,7 @@
 /* Das styling allgemein fuer die Buttons */
 .button { 
    -fx-background-color: red; 
-   -fx-text-fill: white; 
+   -fx-text-fill: #ff0000; 
    -fx-blend-mode: hard-light;
    -fx-border-width: 1.5px; 
    -fx-border-color: brown;
@@ -13,11 +13,11 @@
 /* styling nur speziell fuer den Button mit der id first_button */
 #first_button
 {
-   -fx-background-color: green; 	
+   -fx-background-color: rgb(0,255,0) ; /* r,g,b , also gruen */	
 }
 
 
 #first_button:hover 
 { 
-	-fx-background-color: blue;
+	-fx-background-color: rgba(255,0,0,0.1) ; /* r,g,b, a a steht für alpha (zwischen 0 und 1) - die Durchlaessigkeit */
 }
