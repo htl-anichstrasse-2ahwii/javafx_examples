@@ -19,6 +19,8 @@ public class Ex17_CssFirstExample extends Application {
 		b.setStyle("-fx-font: normal bold 20px 'serif' ");
 		root.setCenter(b);
 
+		b.getStyleClass().add("special_buttons");
+		
 		// so kann man die aktuell zugewiesenen Styles abfragen
 		String style = b.getStyle();
 		System.out.println(style);
