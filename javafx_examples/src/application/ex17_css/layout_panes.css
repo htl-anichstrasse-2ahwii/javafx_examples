@@ -13,6 +13,6 @@
 
 .button
 {
-	-fx-padding: 10; /* Wie viel Platz von Inhalt bis zum Rand soll gegeben werden */
-	-fx-background-radius: 15.0; /* extrem abgerundete Ecken bei den Buttons */ 
+	-fx-background-radius: 10.0; /* extrem abgerundete Ecken bei den Buttons */ 
+	-fx-padding: 10 10 10 100;
 }

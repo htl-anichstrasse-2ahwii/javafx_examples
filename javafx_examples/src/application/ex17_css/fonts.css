@@ -2,7 +2,7 @@
 
 
 .label { 
-   -fx-font-family: serif;
-   -fx-font-size: 22px;
-   -fx-font-weight: bold;
+   -fx-font-family: monospace;
+   -fx-font-size: 52px;
+   -fx-font-weight: lighter;
 }
