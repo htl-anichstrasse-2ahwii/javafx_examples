@@ -1,0 +1,18 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#top
+{
+	-fx-background-color: #2f4f4f; /* Eine farbe wird gesetzt (r,g,b) */
+	-fx-spacing: 10.0; /* Abstand zwischen den Buttons */
+	-fx-background-radius: 5.0; /* Abgerundete Ecken beim Hintergrund */ 
+	-fx-border-color: red;
+	-fx-border-style: dashed;
+    -fx-border-width: 5px;
+    -fx-alignment: center; /* Die gesamte Leiste wird immer in der Mitte sein */
+}	
+
+.button
+{
+	-fx-padding: 10; /* Wie viel Platz von Inhalt bis zum Rand soll gegeben werden */
+	-fx-background-radius: 15.0; /* extrem abgerundete Ecken bei den Buttons */ 
+}
