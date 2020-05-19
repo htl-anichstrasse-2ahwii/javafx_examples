@@ -19,6 +19,9 @@ public class Ex17_FormatLayoutPanes extends Application {
 		for (int i = 1; i <= 10;i++)
 		{
 			Button b = new Button(i + "");
+//			b.setMaxWidth(600);
+//			b.setPrefWidth(600);
+//			b.setMinWidth(30);
 			top.getChildren().add(b);
 		}
 		

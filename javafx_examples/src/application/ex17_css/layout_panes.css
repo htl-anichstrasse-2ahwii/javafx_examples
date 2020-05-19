@@ -6,7 +6,7 @@
 	-fx-spacing: 10.0; /* Abstand zwischen den Buttons */
 	-fx-background-radius: 5.0; /* Abgerundete Ecken beim Hintergrund */ 
 	-fx-border-color: red;
-	-fx-border-style: dashed;
+	-fx-border-style: dotted;
     -fx-border-width: 5px;
     -fx-alignment: center; /* Die gesamte Leiste wird immer in der Mitte sein */
 }	
