@@ -3,9 +3,8 @@
 
 /* Das styling allgemein fuer die Buttons */
 .button { 
-   -fx-background-color: darkblue;  
-   -fx-text-fill: #6400FF; 
-   -fx-blend-mode: hard-light;
+   -fx-background-color: red; 
+   -fx-text-fill: white; 
    -fx-border-width: 1.5px; 
    -fx-border-color: brown;
 }
@@ -13,18 +12,11 @@
 /* styling nur speziell fuer den Button mit der id first_button */
 #first_button
 {
-   -fx-background-color: rgb(100,255,100,0.9) ; /* r,g,b , also gruen */	
-   -fx-rotate: 60;
-   -fx-effect: dropshadow(  gaussian , red , 10 , 0.1 , 20 , 20 );
+   -fx-background-color: green; 	
 }
 
 
 #first_button:hover 
 { 
-	-fx-background-color: rgba(255,0,0,0.1) ; /* r,g,b, a a steht für alpha (zwischen 0 und 1) - die Durchlaessigkeit */
-}
-
-#first_button:pressed 
-{ 
-	-fx-rotate: 0;
+	-fx-background-color: blue;
 }
