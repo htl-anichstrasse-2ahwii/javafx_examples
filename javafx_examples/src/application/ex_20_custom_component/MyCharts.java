@@ -8,7 +8,7 @@ import javafx.scene.layout.AnchorPane;
 
 /**
  * example borrowed from: https://panjutorials.de/tutorials/javafx-8-gui/lektionen/line-chart-in-javafx/?content-item-only=yes
- *
+ * Alternative wäre, dass hier gleich von <i>LineChart</i> geerbt wird
  */
 public class MyCharts extends AnchorPane {
 	public MyCharts() {
