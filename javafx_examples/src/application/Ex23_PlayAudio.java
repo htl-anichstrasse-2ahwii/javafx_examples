@@ -19,7 +19,7 @@ public class Ex23_PlayAudio extends Application {
 			Button b = new Button("Hallo");
 			root.setCenter(b);
 
-			Button b1 = new Button("Drück mich!! 1");
+			Button b1 = new Button("Spiele Musik ab");
 			b1.setOnAction((ActionEvent e) -> {
 				String bip = "/home/albert/donna.mp3"; //Edit the path here
 				Media hit = new Media(Paths.get(bip).toUri().toString());
