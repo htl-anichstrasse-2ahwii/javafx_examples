@@ -30,6 +30,7 @@ public class Ex10_NewWindow extends Application {
 			newWindow.setTitle("Die zweite 'Stage'");
 			newWindow.setScene(secondScene);
 
+			
 			// Wo soll das Fenster aufgehen: Relativ zum Hauptfenster + (200,100)
 			newWindow.setX(primaryStage.getX() + 200);
 			newWindow.setY(primaryStage.getY() + 100);
