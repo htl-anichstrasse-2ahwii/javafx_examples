@@ -114,7 +114,4 @@ public class Ex04_ListView extends Application implements ChangeListener<String>
 	public static void main(String[] args) {
 		launch(args);
 	}
-
-
-
 }
