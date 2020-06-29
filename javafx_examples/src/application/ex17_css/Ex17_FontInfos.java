@@ -36,7 +36,8 @@ public class Ex17_FontInfos extends Application {
 			f.appendText(familiy + "\n");
 		}
 		
-		fontFamilies.setStyle("-fx-font: 12px Regular");
+		
+		fontFamilies.setStyle("-fx-font-family: monospace; -fx-font: 12px Regular");
 		//fontFamilies.setStyle("-fx-font: 100px Tahoma");
 		center.getChildren().addAll(fontNames, l, fontFamilies, f);
 		root.setCenter(center);
