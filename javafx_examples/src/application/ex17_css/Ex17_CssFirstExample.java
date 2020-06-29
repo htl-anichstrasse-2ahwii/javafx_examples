@@ -43,6 +43,7 @@ public class Ex17_CssFirstExample extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.show();
 
+
 	}
 
 	public static void main(String[] args) {
