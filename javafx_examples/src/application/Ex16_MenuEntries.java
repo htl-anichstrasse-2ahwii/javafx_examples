@@ -39,8 +39,8 @@ public class Ex16_MenuEntries extends Application implements EventHandler<Action
 
 		center = new Label("Hier wird dann der aktuell ausgewählte Menueintrag angezeigt");
 
-		Menu m1 = new Menu("Menu 1");
-		m11 = new MenuItem("Eintrag 1 1");
+		Menu m1 = new Menu("_Menu 1"); //Wenn ein Underscore davorsteht kann man das Menu mit z.B. ALT-M öffnen
+		m11 = new MenuItem("_Eintrag 1 1");
 		m12 = new MenuItem("Eintrag 1 2");
 		m13 = new MenuItem("Eintrag 1 3");
 		m1.getItems().addAll(m11, m12, m13);
