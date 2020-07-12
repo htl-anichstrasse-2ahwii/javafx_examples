@@ -21,6 +21,8 @@ import javafx.stage.Stage;
  * diesem Beispiel das komplette Fenster ausfuellt, sondern nur Teile. Das
  * Canvas-Element kann man naemlich gleich wie jedes Steuerelement einfach auf
  * der Seite positionieren
+ * 
+ * Wie kann man auslesen, an welche Position im Canvas geklickt wurde
  */
 public class Ex14_Drawing extends Application implements EventHandler<MouseEvent> {
 
