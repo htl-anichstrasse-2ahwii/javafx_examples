@@ -17,7 +17,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class ex21_Charts extends Application {
+public class Ex21_Charts extends Application {
 	
 	/**
 	 * taken from: https://stackoverflow.com/questions/26854301/how-to-control-the-javafx-tooltips-delay?rq=1
