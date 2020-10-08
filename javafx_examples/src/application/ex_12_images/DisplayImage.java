@@ -25,6 +25,7 @@ public class DisplayImage extends Application {
 			// Das Bild wird aus dem Klassenpfad geladen. Für uns bedeutet das, dass das
 			// Verzeichnis mit den Bildern innerhalb von src liegen muss
 			Image im = new Image("images/bart.png");
+			
 			ImageView v = new ImageView(im);
 			grid.add(v, 0, 0);
 

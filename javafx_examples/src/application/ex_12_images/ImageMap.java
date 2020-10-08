@@ -1,7 +1,5 @@
 package application.ex_12_images;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -14,7 +12,7 @@ import javafx.stage.Stage;
  * Das Beispiel zeigt wie man auf das Klicken eines Bildes in unterschiedlichen Bereichen reagieren kann
  *
  */
-public class ImageMap extends Application implements EventHandler<MouseEvent>{
+public class ImageMap extends Application {
 
 	@Override
 	public void start(Stage primaryStage) {
