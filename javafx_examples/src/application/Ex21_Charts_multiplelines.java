@@ -16,8 +16,10 @@ import javafx.stage.Stage;
 
 public class Ex21_Charts_multiplelines extends Application implements ChangeListener<String> {
 
+	//Das linechart - Object
 	LineChart<String, Number> lineChart;
 
+	//Zufallszahlen, die für die Darstellung verwendet werden
 	private double[] rnd(int cnt, int upper) {
 		double[] na = new double[cnt];
 		for (int i = 0; i < na.length; i++) {
@@ -28,6 +30,7 @@ public class Ex21_Charts_multiplelines extends Application implements ChangeList
 
 	@Override
 	public void start(Stage primaryStage) {
+		//Achsenbeschriftungen
 		final CategoryAxis xAxis = new CategoryAxis();
 		final NumberAxis yAxis = new NumberAxis();
 		xAxis.setLabel("Jahr");
@@ -41,8 +44,8 @@ public class Ex21_Charts_multiplelines extends Application implements ChangeList
 		BorderPane root = new BorderPane();
 		root.setCenter(lineChart);
 
+		//Hier werden die Beispiel-Gemeinden gesetzt
 		ListView<String> listView = new ListView<String>();
-		//listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 		for (int i = 0; i < 300; i++) {
 			listView.getItems().add("Gemeinde " + (i + 1));
 		}
@@ -55,6 +58,7 @@ public class Ex21_Charts_multiplelines extends Application implements ChangeList
 			lineChart.getData().clear();
 		});
 		root.setTop(clear);
+		
 		Scene scene = new Scene(root, primaryStage.getWidth(), primaryStage.getHeight());
 		scene.getStylesheets().add("application/application.css");
 		primaryStage.setScene(scene);
@@ -69,8 +73,8 @@ public class Ex21_Charts_multiplelines extends Application implements ChangeList
 
 	@Override
 	public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+		//Hole die ausgewählte Gemeinde und stelle die Daten dar
 		XYChart.Series<String, Number> series = new XYChart.Series<String, Number>();
-		
 		series.setName(newValue);
 		double[] z1 = rnd(20, 1000);
 		for (int i = 0; i < z1.length; i++) {
