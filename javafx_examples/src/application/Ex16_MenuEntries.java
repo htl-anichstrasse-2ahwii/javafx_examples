@@ -1,5 +1,7 @@
 package application;
 
+import java.util.Optional;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,6 +13,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.SeparatorMenuItem;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -35,8 +38,7 @@ public class Ex16_MenuEntries extends Application implements EventHandler<Action
 	ToggleGroup tg;
 	
 	@Override
-	public void start(Stage primaryStage) {
-
+	public void start(Stage primaryStage) {		
 		center = new Label("Hier wird dann der aktuell ausgewählte Menueintrag angezeigt");
 
 		Menu m1 = new Menu("_Menu 1"); //Wenn ein Underscore davorsteht kann man das Menu mit z.B. ALT-M öffnen
@@ -118,6 +120,21 @@ public class Ex16_MenuEntries extends Application implements EventHandler<Action
 		center.setText(text);
 	}
 
+	private String sampleInputDialog()
+	{
+		TextInputDialog dialog = new TextInputDialog("walter");
+		dialog.setTitle("Text Input Dialog");
+		dialog.setHeaderText("Look, a Text Input Dialog");
+		dialog.setContentText("Please enter your name:");
+
+		// Traditional way to get the response value.
+		Optional<String> result = dialog.showAndWait();
+		if (result.isPresent()){
+		    return result.get();
+		}
+		return "";
+	}
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
