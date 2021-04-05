@@ -1,6 +1,9 @@
 package application.ex_12_images;
 
+import javafx.animation.FadeTransition;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -8,8 +11,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
-public class ButtonWithImage extends Application {
+
+
+
+public class ButtonWithImage extends Application implements EventHandler<ActionEvent>{
+	FadeTransition ft = new FadeTransition();
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -30,9 +38,16 @@ public class ButtonWithImage extends Application {
 
 			Image im3 = new Image("images/icons/accessories-dictionary.png");
 			Button b3 = new Button();
-			b3.setGraphic(new ImageView(im3));			
+			ImageView iv3 = new ImageView(im3);
+			b3.setGraphic(iv3);			
 			top.getChildren().add(b3);
-
+			b3.setOnAction(this);
+			ft.setNode(iv3);
+			ft.setDuration(new Duration(2000));
+			ft.setFromValue(1.0);
+			ft.setToValue(0.0);
+			//ft.setCycleCount(6);
+			//ft.setAutoReverse(true);
 			
 			root.setTop(top);
 
@@ -47,6 +62,12 @@ public class ButtonWithImage extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
+	}
+
+	@Override
+	public void handle(ActionEvent event) {
+		ft.play();
+		
 	}
 
 }
