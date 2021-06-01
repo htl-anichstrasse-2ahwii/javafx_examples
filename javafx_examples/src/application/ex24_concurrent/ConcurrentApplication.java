@@ -21,10 +21,6 @@ public class ConcurrentApplication extends Application {
 	private long n2 = 1;
 	private int num = 1;
 
-	public static void main(String[] args) {
-		Application.launch(args);
-	}
-
 	@Override
 	public void start(Stage stage) throws Exception {
 		BorderPane root = new BorderPane();
@@ -53,6 +49,10 @@ public class ConcurrentApplication extends Application {
 					FiboCalcTask task = new FiboCalcTask(ival);
 					lbl1.textProperty().bind(task.messageProperty());
 
+					task.setOnCancelled((succeesesEvent) -> {
+						btnStart.setDisable(true);
+						lbl2.setText("");
+					});
 					task.setOnRunning((succeesesEvent) -> {
 						btnStart.setDisable(true);
 						lbl2.setText("");
@@ -99,4 +99,9 @@ public class ConcurrentApplication extends Application {
 
 		return gp;
 	}
+	
+	public static void main(String[] args) {
+		Application.launch(args);
+	}
+
 }
