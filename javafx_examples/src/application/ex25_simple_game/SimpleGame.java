@@ -51,8 +51,8 @@ public class SimpleGame extends Application {
 		new AnimationTimer() {
 			public void handle(long currentNanoTime) {
 				double t = (currentNanoTime - startNanoTime) / 1000000000.0;
-
-				double x = 232 + 128 * Math.cos(t);
+				System.out.println(t);
+				double x = (int) (Math.random() * 10) + 232 + 128 * Math.cos(t);
 				double y = 232 + 128 * Math.sin(t);
 
 				// background image clears canvas
@@ -60,6 +60,7 @@ public class SimpleGame extends Application {
 				gc.drawImage(eyes, x, y);
 				gc.drawImage(player, player_x, player_y);
 			}
+
 		}.start();
 
 		theScene.setOnKeyPressed(new EventHandler<KeyEvent>() {
