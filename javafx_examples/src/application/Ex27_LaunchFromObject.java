@@ -10,14 +10,16 @@ import javafx.stage.Stage;
 
 /**
  * JavaFX verhält sich ein wenig kompliziert wenn es darum geht eine Application
- * ohne der statischen Methode launch zu erzeugen, sondern durch das Erzeugen eines Objektes
+ * ohne der statischen Methode launch zu erzeugen, sondern durch das Erzeugen
+ * eines Objektes
  */
 public class Ex27_LaunchFromObject extends Application {
 	String any;
+
 	public Ex27_LaunchFromObject(String any) {
 		this.any = any;
 	}
-	
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -35,11 +37,8 @@ public class Ex27_LaunchFromObject extends Application {
 
 	public static void main(String[] args) {
 		Ex27_LaunchFromObject o = new Ex27_LaunchFromObject("Hallo");
-		Platform.runLater(new Runnable() {
-			@Override
-			public void run() {
-				o.start(new Stage());
-			}
+		Platform.runLater(() -> {
+			o.start(new Stage());
 		});
 	}
 }
